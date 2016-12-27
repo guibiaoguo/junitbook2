@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch14-cactus-war:war">
+    <output-path>$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus/target</output-path>
+    <root id="archive" name="ch12-htmlunit-cactus-2.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch14-cactus-war:war exploded" />
+    </root>
+  </artifact>
+</component>
