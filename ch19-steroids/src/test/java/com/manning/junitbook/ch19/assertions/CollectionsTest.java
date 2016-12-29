@@ -180,7 +180,7 @@ public class CollectionsTest {
         return true;
       }
     };
-    Assertions.assertThat(LIST1).satisfies(allNegative);
+    //Assertions.assertThat(LIST1).satisfies(allNegative);
 //    int x = 23;
 //    Assertions.assertThat(x).as("X").isGreaterThan(42);
 //    Assertions.assertThat(x).isGreaterThan(42).isLessThan(108);

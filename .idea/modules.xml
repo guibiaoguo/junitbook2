@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/appA-junit3_junit4/appA-junit3_junt4.iml" filepath="$PROJECT_DIR$/appA-junit3_junit4/appA-junit3_junt4.iml" />
       <module fileurl="file://$PROJECT_DIR$/appB-customAPI/appB-customAPI.iml" filepath="$PROJECT_DIR$/appB-customAPI/appB-customAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch16-osgi/calculator-client/calculator-client.iml" filepath="$PROJECT_DIR$/ch16-osgi/calculator-client/calculator-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch16-osgi/calculator-service/calculator-service.iml" filepath="$PROJECT_DIR$/ch16-osgi/calculator-service/calculator-service.iml" />
@@ -17,20 +18,17 @@
       <module fileurl="file://$PROJECT_DIR$/ch10-maven/ch10-maven.iml" filepath="$PROJECT_DIR$/ch10-maven/ch10-maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-gui/ch12-gui.iml" filepath="$PROJECT_DIR$/ch12-gui/ch12-gui.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-gui/ch12-htmlunit/ch12-htmlunit.iml" filepath="$PROJECT_DIR$/ch12-gui/ch12-htmlunit/ch12-htmlunit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus/ch12-htmlunit-cactus.iml" filepath="$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus/ch12-htmlunit-cactus.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-gui/ch12-selenium/ch12-selenium.iml" filepath="$PROJECT_DIR$/ch12-gui/ch12-selenium/ch12-selenium.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-ajax.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-ajax.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-selenium/ch13-ajax (1).iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-selenium/ch13-ajax (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-gwt-StockWatcher/ch13-gwt-StockWatcher.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-gwt-StockWatcher/ch13-gwt-StockWatcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-htmlunit/ch13-htmlunit.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-htmlunit/ch13-htmlunit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-htmlunit/ch13-htmlunit (1).iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-htmlunit/ch13-htmlunit (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-httpclient/ch13-htmlunit (2).iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-httpclient/ch13-htmlunit (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-httpclient/ch13-httpclient.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-httpclient/ch13-httpclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-jsunit/ch13-jsunit.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-jsunit/ch13-jsunit.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-rhinounit/ch13-rhinounit.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-rhinounit/ch13-rhinounit.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch13-ajax/ch13-selenium/ch13-selenium.iml" filepath="$PROJECT_DIR$/ch13-ajax/ch13-selenium/ch13-selenium.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch14-cactus/ch14-cactus.iml" filepath="$PROJECT_DIR$/ch14-cactus/ch14-cactus.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch14-cactus/ch14-cactus-ear/ch14-cactus-ear.iml" filepath="$PROJECT_DIR$/ch14-cactus/ch14-cactus-ear/ch14-cactus-ear.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus/ch14-cactus-war.iml" filepath="$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus/ch14-cactus-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch14-cactus/ch14-cactus-war/ch14-cactus-war.iml" filepath="$PROJECT_DIR$/ch14-cactus/ch14-cactus-war/ch14-cactus-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch15-jsfunit/ch15-jsfunit.iml" filepath="$PROJECT_DIR$/ch15-jsfunit/ch15-jsfunit.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch16-osgi/ch16-osgi.iml" filepath="$PROJECT_DIR$/ch16-osgi/ch16-osgi.iml" />

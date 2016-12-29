@@ -43,6 +43,8 @@ public class TestPurchaseAlbum
 {
     public static Test suite()
     {
+        System.setProperty("cactus.contextURL",
+                "http://localhost:8080/test");
         return new TestSuite( TestPurchaseAlbum.class );
     }
 

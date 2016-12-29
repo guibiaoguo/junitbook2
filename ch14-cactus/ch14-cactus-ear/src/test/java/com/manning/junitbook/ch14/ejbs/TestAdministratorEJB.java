@@ -32,11 +32,15 @@ import java.util.Properties;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
 import org.apache.cactus.ServletTestCase;
+import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
 import org.apache.commons.beanutils.DynaBean;
 
 import com.manning.junitbook.ch14.ejb.AdministratorBean;
 import com.manning.junitbook.ch14.ejb.IAdministratorLocal;
+import org.hsqldb.jdbcDriver;
 
 /**
  * A test-case for the AdministratorEJB
@@ -47,9 +51,8 @@ public class TestAdministratorEJB extends ServletTestCase {
 	 */
 	private IAdministratorLocal administrator;
 
-	
 	/**
-	 * @see TestCase#setUp()
+	 * @see //TestCase#setUp()
 	 */
 	public void setUp() throws Exception {
 		Properties properties = new Properties();
@@ -57,13 +60,8 @@ public class TestAdministratorEJB extends ServletTestCase {
 				"org.jnp.interfaces.NamingContextFactory");
 		properties.put("java.naming.factory.url.pkgs",
 				"org.jboss.naming rg.jnp.interfaces");
-
 		InitialContext ctx = new InitialContext(properties);
-
-		administrator = (IAdministratorLocal) ctx.lookup("ch14-cactus-ear-cactified/"
-				+ AdministratorBean.class.getSimpleName() + "/local");
-		
-		
+		administrator = new AdministratorBean();
 		Connection conn = getConnection();
 		
 		Statement s = conn.createStatement();
@@ -111,7 +109,7 @@ public class TestAdministratorEJB extends ServletTestCase {
 	 * Again test the {@link AdministratorBean#execute(String)} method by passing a
 	 * query that would return empty resultset.
 	 * 
-	 * @throws Excpetion on error
+	 * @throws //Excpetion on error
 	 */
 	public void testAdministratorBeanSelectOneUserShouldResultInNiceOutput() throws Exception {
         Collection result = administrator.execute("SELECT * FROM USERS WHERE ID='3' ORDER BY ID ASC");

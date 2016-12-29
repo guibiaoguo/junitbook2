@@ -32,6 +32,7 @@ import javax.el.FunctionMapper;
 import javax.el.ValueExpression;
 import javax.el.VariableMapper;
 
+import org.apache.el.ExpressionFactoryImpl;
 import org.apache.el.ValueExpressionLiteral;
 
 public final class ELContextImpl extends ELContext {
@@ -45,7 +46,7 @@ public final class ELContextImpl extends ELContext {
   ELContextImpl() {
     final String factoryClass = "org.apache.el.ExpressionFactoryImpl";
     System.setProperty("javax.el.ExpressionFactory", factoryClass);
-    factory = ExpressionFactory.newInstance();
+    factory = new ExpressionFactoryImpl();//.newInstance();
     if ( factory == null ) {
       throw new RuntimeException( "could not get instance of factory class " + factoryClass );
     }

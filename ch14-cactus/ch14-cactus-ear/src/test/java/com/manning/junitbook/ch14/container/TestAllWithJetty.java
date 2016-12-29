@@ -20,12 +20,10 @@
  */
 package com.manning.junitbook.ch14.container;
 
-import com.manning.junitbook.ch14.servlets.TestAdminServlet;
-import com.manning.junitbook.ch14.servlets.TestSecurityFilter;
-import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
-
+import com.manning.junitbook.ch14.ejbs.TestAdministratorEJB;
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
 
 public class TestAllWithJetty 
 {
@@ -35,9 +33,7 @@ public class TestAllWithJetty
             "http://localhost:8080/test");
 
         TestSuite suite = new TestSuite("All tests with Jetty");
-        suite.addTestSuite(TestSampleServletIntegration.class);
-        suite.addTestSuite(TestAdminServlet.class);
-        suite.addTestSuite(TestSecurityFilter.class);
+        suite.addTestSuite(TestAdministratorEJB.class);
         return new Jetty5xTestSetup(suite);
     }
 }

@@ -42,8 +42,10 @@ import com.manning.junitbook.ch15.model.Album;
 public class TestListAvailableAlbumsBean
     extends org.apache.cactus.ServletTestCase
 {
+
     public static Test suite()
     {
+        System.setProperty("cactus.contextURL","http://localhost:8080/test");
         return new TestSuite( TestListAvailableAlbumsBean.class );
     }
 

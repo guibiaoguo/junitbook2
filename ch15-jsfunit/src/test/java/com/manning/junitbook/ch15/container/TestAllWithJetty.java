@@ -18,14 +18,11 @@
  * 
  * ========================================================================
  */
-package com.manning.junitbook.ch14.container;
-
-import com.manning.junitbook.ch14.servlets.TestAdminServlet;
-import com.manning.junitbook.ch14.servlets.TestSecurityFilter;
-import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
-
+package com.manning.junitbook.ch15.container;
+import com.manning.junitbook.ch15.beans.*;
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
 
 public class TestAllWithJetty 
 {
@@ -35,9 +32,11 @@ public class TestAllWithJetty
             "http://localhost:8080/test");
 
         TestSuite suite = new TestSuite("All tests with Jetty");
-        suite.addTestSuite(TestSampleServletIntegration.class);
-        suite.addTestSuite(TestAdminServlet.class);
-        suite.addTestSuite(TestSecurityFilter.class);
+        suite.addTestSuite(TestListAvailableAlbumsBean.class);
+        suite.addTestSuite(TestListAvailableAlbumsWithHTMLUnit.class);
+        suite.addTestSuite(TestPerformanceOfListAvailableAlbumsBean.class);
+        suite.addTestSuite(TestPerformanceOfPurchaseBean.class);
+        suite.addTestSuite(TestPurchaseAlbum.class);
         return new Jetty5xTestSetup(suite);
     }
 }

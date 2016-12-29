@@ -17,6 +17,83 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for ch13-jsunit" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch13-jsunit" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch13-htmlunit" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch13-htmlunit" />
+      </profile>
+      <profile default="false" name="Annotation profile for appB-customAPI" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="appB-customAPI" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch14-cactus-ear" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch14-cactus-ear" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch09-ant" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch09-ant" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch14-cactus-war" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch14-cactus-war" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch13-gwt-StockWatcher" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch13-gwt-StockWatcher" />
+      </profile>
+      <profile default="false" name="Annotation profile for calculator-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="calculator-service" />
+      </profile>
+      <profile default="false" name="Annotation profile for calculator-client" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="calculator-client" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch12-htmlunit-cactus" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch12-htmlunit-cactus" />
+      </profile>
+      <profile default="false" name="Annotation profile for calculator-test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="calculator-test" />
+      </profile>
       <profile default="false" name="Annotation profile for ch15-jsfunit" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -30,6 +107,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ch19-steroids" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch03-mastering" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch03-mastering" />
       </profile>
       <profile default="false" name="Annotation profile for ch18-jpa" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -45,96 +129,12 @@
         <processorPath useClasspath="true" />
         <module name="ch17-dbunit" />
       </profile>
-      <profile default="false" name="Annotation profile for ch08-incontainer" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch08-incontainer" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch06-stubs" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch06-stubs" />
-      </profile>
-      <profile default="false" name="Annotation profile for calculator-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="calculator-service" />
-      </profile>
-      <profile default="false" name="Annotation profile for calculator-test" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="calculator-test" />
-      </profile>
       <profile default="false" name="Annotation profile for ch02-internals" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ch02-internals" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch10-maven" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch10-maven" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch07-mocks" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch07-mocks" />
-      </profile>
-      <profile default="false" name="Annotation profile for calculator-client" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="calculator-client" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch03-mastering" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch03-mastering" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch05-cobertura" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch05-cobertura" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch01-jumpstart" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch01-jumpstart" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch09-ant" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch09-ant" />
-      </profile>
-      <profile default="false" name="Annotation profile for appB-customAPI" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="appB-customAPI" />
       </profile>
       <profile default="false" name="Annotation profile for ch12-htmlunit" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -143,12 +143,19 @@
         <processorPath useClasspath="true" />
         <module name="ch12-htmlunit" />
       </profile>
-      <profile default="false" name="Annotation profile for ch14-cactus-war" enabled="true">
+      <profile default="false" name="Annotation profile for ch13-httpclient" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch14-cactus-war" />
+        <module name="ch13-httpclient" />
+      </profile>
+      <profile default="false" name="Annotation profile for ch10-maven" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ch10-maven" />
       </profile>
       <profile default="false" name="Annotation profile for ch12-selenium" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -157,48 +164,40 @@
         <processorPath useClasspath="true" />
         <module name="ch12-selenium" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for ch08-incontainer" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch13-ajax (1)" />
-        <module name="ch13-htmlunit (2)" />
+        <module name="ch08-incontainer" />
       </profile>
-      <profile default="false" name="Annotation profile for ch13-htmlunit (1)" enabled="true">
+      <profile default="false" name="Annotation profile for ch07-mocks" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch13-htmlunit (1)" />
+        <module name="ch07-mocks" />
       </profile>
-      <profile default="false" name="Annotation profile for ch13-jsunit" enabled="true">
+      <profile default="false" name="Annotation profile for ch06-stubs" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch13-jsunit" />
+        <module name="ch06-stubs" />
       </profile>
-      <profile default="false" name="Annotation profile for ch13-htmlunit" enabled="true">
+      <profile default="false" name="Annotation profile for ch01-jumpstart" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch13-htmlunit" />
+        <module name="ch01-jumpstart" />
       </profile>
-      <profile default="false" name="Annotation profile for ch13-gwt-StockWatcher" enabled="true">
+      <profile default="false" name="Annotation profile for ch05-cobertura" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch13-gwt-StockWatcher" />
-      </profile>
-      <profile default="false" name="Annotation profile for ch13-httpclient" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="ch13-httpclient" />
+        <module name="ch05-cobertura" />
       </profile>
       <profile default="false" name="Annotation profile for ch13-rhinounit" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -214,58 +213,56 @@
         <processorPath useClasspath="true" />
         <module name="ch13-selenium" />
       </profile>
-      <profile default="false" name="Annotation profile for ch14-cactus-ear" enabled="true">
+      <profile default="false" name="Annotation profile for appB-junit3_junit4" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch14-cactus-ear" />
       </profile>
-      <profile default="false" name="Annotation profile for ch14-cactus-war (1)" enabled="true">
+      <profile default="false" name="Annotation profile for appA-junit3_junt4" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ch14-cactus-war (1)" />
+        <module name="appA-junit3_junt4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="appB-customAPI" target="1.5" />
-      <module name="calculator-client" target="1.5" />
-      <module name="calculator-service" target="1.5" />
-      <module name="calculator-test" target="1.5" />
+      <module name="appA-junit3_junt4" target="1.6" />
+      <module name="appB-customAPI" target="1.6" />
+      <module name="appB-junit3_junit4" target="1.5" />
+      <module name="calculator-client" target="1.6" />
+      <module name="calculator-service" target="1.6" />
+      <module name="calculator-test" target="1.6" />
       <module name="ch01-jumpstart" target="1.5" />
-      <module name="ch02-internals" target="1.5" />
+      <module name="ch02-internals" target="1.6" />
       <module name="ch03-mastering" target="1.5" />
       <module name="ch05-cobertura" target="1.6" />
-      <module name="ch06-stubs" target="1.5" />
-      <module name="ch07-mocks" target="1.5" />
-      <module name="ch08-incontainer" target="1.5" />
-      <module name="ch09-ant" target="1.5" />
-      <module name="ch10-maven" target="1.5" />
-      <module name="ch12-gui" target="1.5" />
-      <module name="ch12-htmlunit" target="1.5" />
-      <module name="ch12-selenium" target="1.5" />
-      <module name="ch13-ajax" target="1.5" />
-      <module name="ch13-ajax (1)" target="1.8" />
-      <module name="ch13-gwt-StockWatcher" target="1.5" />
-      <module name="ch13-htmlunit" target="1.5" />
-      <module name="ch13-htmlunit (1)" target="5" />
-      <module name="ch13-htmlunit (2)" target="1.8" />
-      <module name="ch13-httpclient" target="1.5" />
-      <module name="ch13-jsunit" target="1.5" />
-      <module name="ch13-rhinounit" target="1.5" />
-      <module name="ch13-selenium" target="1.5" />
-      <module name="ch14-cactus" target="1.5" />
-      <module name="ch14-cactus-ear" target="1.5" />
-      <module name="ch14-cactus-war" target="1.5" />
-      <module name="ch14-cactus-war (1)" target="1.5" />
-      <module name="ch15-jsfunit" target="1.5" />
-      <module name="ch16-osgi" target="1.5" />
-      <module name="ch17-dbunit" target="1.5" />
-      <module name="ch18-jpa" target="1.5" />
-      <module name="ch19-steroids" target="1.5" />
-      <module name="junit-in-action-II" target="1.5" />
+      <module name="ch06-stubs" target="1.6" />
+      <module name="ch07-mocks" target="1.6" />
+      <module name="ch08-incontainer" target="1.6" />
+      <module name="ch09-ant" target="1.6" />
+      <module name="ch10-maven" target="1.6" />
+      <module name="ch12-gui" target="1.6" />
+      <module name="ch12-htmlunit" target="1.6" />
+      <module name="ch12-htmlunit-cactus" target="1.6" />
+      <module name="ch12-selenium" target="1.6" />
+      <module name="ch13-ajax" target="1.6" />
+      <module name="ch13-gwt-StockWatcher" target="1.6" />
+      <module name="ch13-htmlunit" target="1.6" />
+      <module name="ch13-httpclient" target="1.6" />
+      <module name="ch13-jsunit" target="1.6" />
+      <module name="ch13-rhinounit" target="1.6" />
+      <module name="ch13-selenium" target="1.6" />
+      <module name="ch14-cactus" target="1.6" />
+      <module name="ch14-cactus-ear" target="1.6" />
+      <module name="ch14-cactus-war" target="1.6" />
+      <module name="ch15-jsfunit" target="1.6" />
+      <module name="ch16-osgi" target="1.6" />
+      <module name="ch17-dbunit" target="1.6" />
+      <module name="ch18-jpa" target="1.6" />
+      <module name="ch19-steroids" target="1.6" />
+      <module name="junit-in-action-II" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
