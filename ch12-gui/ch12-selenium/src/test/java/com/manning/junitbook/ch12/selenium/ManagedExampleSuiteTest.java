@@ -27,7 +27,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @version $Id$
  */
 @RunWith(ManagedSeleniumServerSuite.class)
-@SuiteClasses( { TestJunit4.class,TestJunitRemote4.class/*,TestJunit3.class*//*,UnmanagedFirstTestJUnit3.class*/, UnmanagedFirstTestJUnit4.class })
+@SuiteClasses( { TestJunit3.class,TestJunit4.class,TestJunitRemote4.class,ManagedTestJUnit4v1.class,UnmanagedFirstTestJUnit3.class, UnmanagedFirstTestJUnit4.class })
 public class ManagedExampleSuiteTest {
     // See annotations.
 }

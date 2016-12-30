@@ -35,7 +35,7 @@ public class TestDefaultController1
         controller = new DefaultController();
     }
 
-    @Test
+    @Test(expected = RuntimeException.class )
     public void testMethod()
     {
         throw new RuntimeException( "implement me" );

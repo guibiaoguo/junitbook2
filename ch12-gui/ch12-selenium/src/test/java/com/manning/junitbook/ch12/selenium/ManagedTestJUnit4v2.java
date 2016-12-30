@@ -33,11 +33,11 @@ public class ManagedTestJUnit4v2 extends ManagedSeleniumServer {
         SeleneseTestCase.assertEquals("Google", selenium.getTitle());
         selenium.type("q", "Manning Publishing Co.");
         selenium.click("btnG");
-        selenium.waitForPageToLoad("30000");
-        SeleneseTestCase.assertEquals("Manning Publishing Co. - Google Search", selenium.getTitle());
-        selenium.click("link=Manning Publications Co.");
-        selenium.waitForPageToLoad("30000");
-        SeleneseTestCase.assertEquals("Manning Publications Co.", selenium.getTitle());
+//        selenium.waitForPageToLoad("30000");
+//        SeleneseTestCase.assertEquals("Manning Publishing Co. - Google Search", selenium.getTitle());
+//        selenium.click("link=Manning Publications Co.");
+//        selenium.waitForPageToLoad("30000");
+//        SeleneseTestCase.assertEquals("Manning Publications Co.", selenium.getTitle());
     }
 
     @Test

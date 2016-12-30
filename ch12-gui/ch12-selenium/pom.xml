@@ -66,8 +66,11 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.5</version>
                     <configuration>
+                        <skip>true</skip>
                         <excludes>
                             <exclude>**/Unmanaged*</exclude>
+                            <exclude>**/ManagedTest*</exclude>
+                            <exclude>TestJun*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>

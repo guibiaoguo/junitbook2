@@ -41,7 +41,7 @@
 	<modules>
 		<module>ch12-htmlunit</module>
 		<module>ch12-htmlunit-cactus</module>
-		<module>ch12-selenium</module>
+		<!--<module>ch12-selenium</module>-->
 	</modules>
 	<profiles>
 		<profile>

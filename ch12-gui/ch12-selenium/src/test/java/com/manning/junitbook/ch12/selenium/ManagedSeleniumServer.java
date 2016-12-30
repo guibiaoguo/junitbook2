@@ -46,7 +46,7 @@ public class ManagedSeleniumServer {
     }
 
     public static void startSeleniumClient() throws Exception {
-        selenium = new DefaultSelenium("localhost", 4444, "*iexplore", "http://www.baidu.com/");
+        selenium = new DefaultSelenium("localhost", 4444, "*iexplore", "http://www.google.com/");
         selenium.start();
     }
 

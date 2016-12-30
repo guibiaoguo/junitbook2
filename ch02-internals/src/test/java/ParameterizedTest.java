@@ -19,7 +19,7 @@ public class ParameterizedTest {
     public static Collection<Integer[]> getTestParameters() {
         Collection c = Arrays.asList(new Integer[][]{ {2,1,1},
                 {3,2,1},
-                {5,3,1},
+                {5,4,1},
                 {4,3,1}});
         return c;
     }

@@ -23,6 +23,7 @@ import java.util.Collection;
 
 import junit.framework.Assert;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -60,6 +61,8 @@ public class GoogleSearchAllBrowsersTest {
         this.browserVersion = browserVersion;
     }
 
+    @Ignore
+    @Test
     public void testSearchPage() throws Exception {
         WebClient webClient = new WebClient(this.browserVersion);
         webClient.setThrowExceptionOnScriptError(false);
@@ -74,6 +77,7 @@ public class GoogleSearchAllBrowsersTest {
         WebAssert.assertTitleEquals(page3, "Manning Publications Co.");
     }
 
+    @Ignore
     @Test
     public void testSearchPageByXPath() throws Exception {
         WebClient webClient = new WebClient(this.browserVersion);
@@ -98,6 +102,7 @@ public class GoogleSearchAllBrowsersTest {
         WebAssert.assertTitleEquals(page3, "Manning Publications Co.");
     }
 
+    @Ignore
     @Test(expected = ElementNotFoundException.class)
     public void testUnknownElement() throws Exception {
         WebClient webClient = new WebClient(this.browserVersion);
@@ -107,6 +112,7 @@ public class GoogleSearchAllBrowsersTest {
         Assert.fail("Expected the previous line throws a ElementNotFoundException");
     }
 
+    @Ignore
     @Test(expected = UnknownHostException.class)
     public void testUnknownPage() throws Exception {
         WebClient webClient = new WebClient(this.browserVersion);

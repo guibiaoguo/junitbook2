@@ -36,7 +36,7 @@ public class FrameTest extends ManagedWebClient {
     @Test
     public void testFramesByIndices() throws IOException {
         this.webClient.setThrowExceptionOnScriptError(false);
-        HtmlPage mainPage = (HtmlPage) this.webClient.getPage("http://java.sun.com/javase/6/docs/api/index.html");
+        HtmlPage mainPage = (HtmlPage) this.webClient.getPage("http://docs.oracle.com/javase/6/docs/api/index.html");
 
         // get page of the first Frame (upper left)
         HtmlPage packageListPage = (HtmlPage) mainPage.getFrames().get(0).getEnclosedPage();
@@ -54,7 +54,7 @@ public class FrameTest extends ManagedWebClient {
     @Test
     public void testFramesByNames() throws IOException {
         this.webClient.setThrowExceptionOnScriptError(false);
-        HtmlPage mainPage = (HtmlPage) this.webClient.getPage("http://java.sun.com/javase/6/docs/api/index.html");
+        HtmlPage mainPage = (HtmlPage) this.webClient.getPage("http://docs.oracle.com/javase/6/docs/api/index.html");
 
         // Gets page of the first Frame (upper left)
         HtmlPage packageListPage = (HtmlPage) mainPage.getFrameByName("packageListFrame").getEnclosedPage();

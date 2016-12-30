@@ -25,7 +25,7 @@
 	<artifactId>appB-customAPI</artifactId>
 	<packaging>jar</packaging>
 
-	<name>JUnitBook Chapter 08 - In-container Testing</name>
+	<name>JUnitBook appB - customAPI Testing</name>
 
 	<dependencies>
 		<dependency>

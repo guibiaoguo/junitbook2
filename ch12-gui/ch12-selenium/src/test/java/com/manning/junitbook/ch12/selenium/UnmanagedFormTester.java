@@ -19,7 +19,6 @@ package com.manning.junitbook.ch12.selenium;
 
 import java.io.IOException;
 
-import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
 import junit.framework.Assert;
 
 import org.junit.AfterClass;
@@ -30,9 +29,6 @@ import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.SeleneseTestCase;
 import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.SeleniumException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Tests a form. The Selenium server must be managed elsewhere.
@@ -54,11 +50,8 @@ public class UnmanagedFormTester {
 
     @BeforeClass
     public static void setUpOnce() throws Exception {
-//        selenium = new DefaultSelenium("localhost", 4444, "*iexplore", TEST_URL);
-//        selenium.start();
-        System.setProperty("webdriver.chrome.driver","D:/Program Files/chromedriver/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        selenium = new WebDriverBackedSelenium(driver, TEST_URL);
+        selenium = new DefaultSelenium("localhost", 4444, "*iexplore", TEST_URL);
+        selenium.start();
     }
 
     @AfterClass
