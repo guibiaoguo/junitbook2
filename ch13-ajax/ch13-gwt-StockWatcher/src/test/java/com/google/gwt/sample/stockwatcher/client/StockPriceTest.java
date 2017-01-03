@@ -20,7 +20,6 @@ public class StockPriceTest extends GWTTestCase {
      * correctly.
      */
     public void testStockPrice3ArgConstructor() {
-        GWTShell
         String symbol = "XYZ";
         double price = 70.0;
         double change = 2.0;
