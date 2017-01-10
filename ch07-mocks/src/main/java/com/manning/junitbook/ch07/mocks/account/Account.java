@@ -37,6 +37,25 @@ public class Account
      */
     private long balance;
 
+    private String name = "name_init";
+
+    public String getName() {
+        return name;
+    }
+
+    private static String className="Class3Mocked_init";
+
+    public static String getClassName(){
+        return className;
+    }
+
+    public int getTriple(int i){
+        return i*3;
+    }
+
+    public Account(){
+
+    }
     /**
      * A constructor.
      * 
@@ -77,5 +96,26 @@ public class Account
     public long getBalance()
     {
         return this.balance;
+    }
+
+    public String hello(String name){
+        System.out.println("hello "+name);
+        return"hello "+name;
+    }
+
+    public void show(){
+        System.out.println("Class1Mocked.show()");
+    }
+
+    public static int getDouble(int i){
+        return i*2;
+    }
+
+    public String getTripleString(int i){
+        return multiply3(i)+"";
+    }
+
+    private int multiply3(int i){
+        return i*3;
     }
 }

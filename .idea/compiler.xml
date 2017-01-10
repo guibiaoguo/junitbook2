@@ -226,11 +226,17 @@
         <processorPath useClasspath="true" />
         <module name="appA-junit3_junt4" />
       </profile>
+      <profile default="false" name="Annotation profile for datacenter" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="datacenter" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="appA-junit3_junt4" target="1.6" />
       <module name="appB-customAPI" target="1.6" />
-      <module name="appB-junit3_junit4" target="1.5" />
       <module name="calculator-client" target="1.6" />
       <module name="calculator-service" target="1.6" />
       <module name="calculator-test" target="1.6" />
@@ -262,6 +268,7 @@
       <module name="ch17-dbunit" target="1.6" />
       <module name="ch18-jpa" target="1.6" />
       <module name="ch19-steroids" target="1.6" />
+      <module name="datacenter" target="1.6" />
       <module name="junit-in-action-II" target="1.6" />
     </bytecodeTargetLevel>
   </component>

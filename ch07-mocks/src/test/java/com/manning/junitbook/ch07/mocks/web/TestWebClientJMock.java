@@ -70,8 +70,9 @@ public class TestWebClientJMock
                                           returnValue( new Integer( (byte) 'r' ) ),
                                           returnValue( new Integer( (byte) 'k' ) ),
                                           returnValue( new Integer( (byte) 's' ) ),
-                                          returnValue( new Integer( (byte) '!' ) ), 
-                                          returnValue( -1 ) ) );
+                                          returnValue( new Integer( (byte) '!' ) ),
+                                          returnValue( -1 )
+                ) );
 
                 oneOf( mockStream ).close();
             }

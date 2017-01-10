@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+        Licensed to the Apache Software Foundation (ASF) under one or more
+        contributor license agreements. See the NOTICE file distributed with
+        this work for additional information regarding copyright ownership.
+        The ASF licenses this file to you under the Apache License, Version
+        2.0 (the "License"); you may not use this file except in compliance
+        with the License. You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+        applicable law or agreed to in writing, software distributed under the
+        License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for
+        the specific language governing permissions and limitations under the
+        License.
+    -->
+<project name="ant-target" default="print">
+    <!-- name是当前工程的名称，default是默认执行的任务，basedir是工作目录（.代表当前根目录） -->
+    <!-- property类似于程序中定义简单的变量 -->
+    <property name="name" value="jojo"/>
+    <property name="age" value="25"/>
+    <property name="src" value="src/main/java"/>
+    <property name="dest" value="build/classes"/>
+    <property name="test-src" value="src/test/java"/>
+    <property name="test-dest" value="build/test-classes"/>
+    <property name="hello_jar" value="hello1.jar"/>
+    <property name="webRoot" value="web"/>
+    <property name="lib.dir" value="lib"/>
+    <path id="lib-classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <!--define the op-->
+    <!--     target是一个事件、事情、任务， name是当前事情的名称，depends是依赖的上一件或是多件事情     如果所依赖的事情没有执行，ant会先运行依赖事情，然后再运行当前事情     -->         <!-- 初始化 -->
+    <target name="init">
+        <mkdir dir="${dest}"/>
+        <mkdir dir="${test-dest}"/>
+        <copy file="ivy.xml" todir="build"/>
+        <copy todir="build/lib">
+            <fileset dir="web/WEB-INF/lib"/>
+        </copy>
+        <copy todir="build/libs">
+            <fileset dir="web/WEB-INF/lib"/>
+        </copy>
+        <copy file="ivy.xml" todir="build/lib"/>
+        <move file="build/lib/ivy.xml" todir="build/test-classes"/>
+        <move todir="build/test-classes/libs">
+            <fileset dir="build/libs"/>
+        </move>
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${dest}">
+            <compilerarg line="-encoding UTF-8"/>
+            <classpath refid="lib-classpath"/>
+        </javac>
+    </target>
+    <target name="compile.test" depends="init">
+        <javac srcdir="${test-src}" destdir="${test-dest}">
+            <compilerarg line="-encoding UTF-8"/>
+            <classpath>
+                <pathelement location="build/classes"/>
+                <path id="lib-test-classpath">
+                    <fileset dir="${lib.dir}">
+                        <include name="**/*.jar"/>
+                    </fileset>
+                </path>
+            </classpath>
+        </javac>
+    </target>
+    <target name="run" depends="build">
+        <java classname="test.ant.HelloWorld" classpath="${hello_jar}"/>
+    </target>
+    <target name="clean">
+        <delete dir="${dest}"/>
+        <delete dir="${test-dest}"/>
+        <delete file="${hello_jar}"/>
+        <delete dir="build/lib"/>
+        <delete file="build/ivy.xml"/>
+        <delete includeEmptyDirs="true">
+            <fileset dir="build"/>
+        </delete>
+    </target>
+    <target name="example">
+        <echo message="name: ${name}, age: ${age}" file="logs/ant.log" append="true"/>
+    </target>
+    <target name="version" if="ant.java.version">
+        <echo message="Java Version: ${ant.java.version}"/>
+    </target>
+    <target name="print" depends="version" unless="docs">
+        <description>a depend example!</description>
+        <echo message="The base dir is: ${basedir}"/>
+    </target>
+
+    <target name="compress" depends="compile">
+        <zip basedir="build/classes" zipfile="build/output.zip"/>
+
+        <!-- 创建tgz -->
+        <gzip src="build/classes/**/*.class" zipfile="output.class.gz"/>
+        <!-- 建立war包 -->
+        <war destfile="${basedir}/web/ash.war" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
+            <exclude name="WEB-INF/classes/**"/>
+            <exclude name="WEB-INF/lib/**"/>
+            <exclude name="WEB-INF/work/_jsp/**"/>
+            <lib dir="${lib.dir}" includes="**/*.jar, **/*.so, **/*.dll">
+                <exclude name="${webRoot}\${hello_jar}"/>
+            </lib>
+            <lib file="${webRoot}/${hello_jar}"/>
+            <classes dir="${dest}" includes="**/*.xml, **/*.properites, **/*.xsd"></classes>
+        </war>
+    </target>
+    <!-- 建立jar包 -->
+    <target name="build" depends="compile">
+        <!--         <jar jarfile="${hello_jar}" basedir="${dest}"/>         创建一个名称是package.jar文件         <jar destfile="package.jar" basedir="classes"/>         -->
+        <jar destfile="build/${hello_jar}" basedir="${dest}">             <!-- 向jar包中的main文件中添加内容 -->
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-class" value="package.Main"/>
+            </manifest>
+        </jar>
+        <!-- 复制jar文件  todir="复制到目录"-->
+        <copy file="build/${hello_jar}" tofile="${dest}\temp.jar"/>
+        <copy todir="temp">
+            <!-- 不按照默认方式 defaultexcludes="" -->
+            <fileset dir="src">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="temp2">
+            <fileset dir="src">
+                <and>
+                    <contains text="main"/>
+                    <size value="1" when="more"/>
+                </and>
+            </fileset>
+        </copy>
+        <!-- 移动jar文件 -->
+        <move file="${dest}\temp.jar" tofile="temp\move-temp.jar"/>
+        <!-- 创建zip -->
+        <zip basedir="${basedir}\build\classes" zipfile="build\output.zip"/>
+        <!-- 创建tgz -->
+        <gzip src="${basedir}\build\classes\**\*.class" zipfile="build\output.class.gz"/>
+        <!-- 解压zip -->
+        <!--<unzip src="build\output.class.gz" dest="build\extractDir"/>-->
+        <!--替换input.txt内容中的old为new         <replace file="input.txt" token="old" value="new"/>         -->
+    </target>
+    <tstamp>
+        <format property="OFFSET_TIME" pattern="HH:mm:ss" offset="10" unit="minute"/>
+    </tstamp>         <!-- 重新运行 -->
+    <target name="rerun" depends="clean,run">
+        <echo message="###${TSTAMP}#${TODAY}#${DSTAMP}###"/>
+        <ant target="clean"/>
+        <ant target="test"/>
+    </target>
+</project>

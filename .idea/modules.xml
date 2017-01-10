@@ -35,6 +35,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch17-dbunit/ch17-dbunit.iml" filepath="$PROJECT_DIR$/ch17-dbunit/ch17-dbunit.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch18-jpa/ch18-jpa.iml" filepath="$PROJECT_DIR$/ch18-jpa/ch18-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch19-steroids/ch19-steroids.iml" filepath="$PROJECT_DIR$/ch19-steroids/ch19-steroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datacenter/datacenter.iml" filepath="$PROJECT_DIR$/datacenter/datacenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/junit-in-action-II.iml" filepath="$PROJECT_DIR$/junit-in-action-II.iml" />
     </modules>
   </component>

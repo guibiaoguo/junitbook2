@@ -21,7 +21,6 @@
 package com.manning.junitbook.ch14.container;
 
 import com.manning.junitbook.ch14.servlets.TestAdminServlet;
-import com.manning.junitbook.ch14.servlets.TestSecurityFilter;
 import org.apache.cactus.extension.jetty.Jetty5xTestSetup;
 
 import junit.framework.Test;
@@ -37,7 +36,7 @@ public class TestAllWithJetty
         TestSuite suite = new TestSuite("All tests with Jetty");
         suite.addTestSuite(TestSampleServletIntegration.class);
         suite.addTestSuite(TestAdminServlet.class);
-        suite.addTestSuite(TestSecurityFilter.class);
+//        suite.addTestSuite(TestSecurityFilter.class);
         return new Jetty5xTestSetup(suite);
     }
 }

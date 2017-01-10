@@ -21,7 +21,7 @@ import com.googlecode.jslint4java.JSLintBuilder;
 
 public class TestJsonService {
 
-    private static final String URL_FIXTURE = "http://localhost:63342/junit-in-action-II/ch13-httpclient/src/main/webapp/glossary.json";
+    private static final String URL_FIXTURE = "http://localhost:63342/junitbook2/ch13-httpclient/src/main/webapp/glossary.json";
 
     @Test
     public void testGetJsonBasicCheck() throws IOException {

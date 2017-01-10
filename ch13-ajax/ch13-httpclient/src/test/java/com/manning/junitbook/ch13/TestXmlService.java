@@ -29,7 +29,7 @@ public class TestXmlService {
     @Test
     public void testGetXmlBasicCheck() throws IOException {
         HttpClient httpClient = new HttpClient();
-        GetMethod get = new GetMethod("http://localhost:63342/junit-in-action-II/ch13-httpclient/src/main/webapp/personal.xml");
+        GetMethod get = new GetMethod("http://localhost:63342/junitbook2/ch13-httpclient/src/main/webapp/personal.xml");
         String responseString;
         try {
             httpClient.executeMethod(get);
@@ -45,7 +45,7 @@ public class TestXmlService {
     @Test
     public void testGetXmlAndValidateXmlSchema() throws IOException, ParserConfigurationException, SAXException {
         HttpClient httpClient = new HttpClient();
-        GetMethod get = new GetMethod("http://localhost:63342/junit-in-action-II/ch13-httpclient/src/main/webapp/personal.xml");
+        GetMethod get = new GetMethod("http://localhost:63342/junitbook2/ch13-httpclient/src/main/webapp/personal.xml");
         Document document;
         try {
             httpClient.executeMethod(get);

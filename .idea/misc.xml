@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/ch12-gui/ch12-htmlunit-cactus" />
     <file type="web" url="file://$PROJECT_DIR$/ch14-cactus/ch14-cactus-war" />
     <file type="web" url="file://$PROJECT_DIR$/ch15-jsfunit" />
+    <file type="web" url="file://$PROJECT_DIR$/datacenter" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,5 +16,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
 </project>

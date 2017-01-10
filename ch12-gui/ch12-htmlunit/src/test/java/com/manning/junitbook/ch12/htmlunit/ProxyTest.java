@@ -35,7 +35,7 @@ public class ProxyTest extends ManagedWebClient {
 
     @Test
     public void testGetHomePageThroughProxy() throws Exception {
-        this.webClient.setProxyConfig(new ProxyConfig("127.0.0.1", 51138));
+        this.webClient.setProxyConfig(new ProxyConfig("127.0.0.1", 38432));
         // Set up proxy user name and password
         DefaultCredentialsProvider credentialsProvider = (DefaultCredentialsProvider) this.webClient.getCredentialsProvider();
         credentialsProvider.addProxyCredentials("username", "password");

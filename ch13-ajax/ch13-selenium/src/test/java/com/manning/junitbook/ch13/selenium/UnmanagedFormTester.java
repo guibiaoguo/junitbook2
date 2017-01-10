@@ -53,7 +53,7 @@ public class UnmanagedFormTester {
      * The directory /ch13-ajax/src/main/webapp has been configured as an IIS
      * virtual directory for this test.
      */
-    private static final String TEST_URL = "http://localhost:63342/junit-in-action-II/ch13-selenium/src/main/webapp/";
+    private static final String TEST_URL = "http://localhost:63342/junitbook2/ch13-selenium/src/main/webapp/";
 
     private static final String TEST_PAGE = "formtest.html";
 
@@ -79,6 +79,7 @@ public class UnmanagedFormTester {
     @Test
     public void testFormBad() throws IOException {
         selenium.open(TEST_PAGE);
+        selenium.waitForPageToLoad("3000");
         selenium.click("name=getMsgBtn");
         String actualMsg = selenium.getText("name=serverMessage");
         // The message is not there!

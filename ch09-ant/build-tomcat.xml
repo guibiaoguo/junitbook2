@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+        Licensed to the Apache Software Foundation (ASF) under one or more
+        contributor license agreements. See the NOTICE file distributed with
+        this work for additional information regarding copyright ownership.
+        The ASF licenses this file to you under the Apache License, Version
+        2.0 (the "License"); you may not use this file except in compliance
+        with the License. You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+        applicable law or agreed to in writing, software distributed under the
+        License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+        CONDITIONS OF ANY KIND, either express or implied. See the License for
+        the specific language governing permissions and limitations under the
+        License.
+    -->
+<project basedir="." name="datacenter" default="auto">
+    <!-- 所有的参数都在build.properties文件 -->
+    <property file="build.properties"/>
+    <!-- <property environment="env"/> 必须放在最前面，可以确保能使用到编译平台的环境变量 -->
+    <!-- <property name="project.root" value="${basedir}" /> 必须放在第二句，在build.properties中不需要再设置此属性 -->
+    <property environment="env" />
+    <property name="project.root" value="${basedir}" />
+    <property name="CATALINA.HOME" value="E:/apache-tomcat-7.0.62" />
+    <!--svnant支持库-->
+    <path id="svnant.lib">
+        <pathelement location="${svnjavahl.jar}"/>
+        <pathelement location="${svnant.jar}"/>
+        <pathelement location="${svnClientAdapter.jar}"/>
+    </path>
+
+    <!--项目的classpath库 -->
+    <path id="project.classpath">
+        <pathelement location="${build.dir}"/>
+        <fileset dir="${lib.dir}"/>
+    </path>
+
+    <!--清理tomcat下面之前部署的项目 -->
+    <target name="clear">
+        <delete dir="${tomcat.home}/work/Catalina/localhost/${ant.project.name}"/>
+        <delete dir="${tomcat.home}/webapps/${ant.project.name}"/>
+        <delete dir="${tomcat.home}/webapps/${ant.project.name}.war"/>
+    </target>
+
+    <!-- load the svn task -->
+    <taskdef name="svn" classname="org.tigris.subversion.svnant.SvnTask" classpathref="svnant.lib"/>
+
+    <!--svn同步任务-->
+    <target name="svn" depends="clear">
+        <mkdir dir="${work.space}"/>
+                <svn username="${svn.username}" password="${svn.password}" javahl="false">
+                    <checkout url="${svn.url}" destPath="${work.space}" revision="HEAD"/>
+                </svn>
+<!--        <svn username="guoguibiao" password="Ucs123" javahl="false">
+            <checkout url="https://172.17.22.17/svn/xhbank/trunk/2000_dev/20161117_v1.0.1/bank_parent/patch_build/"
+                      revision="HEAD" destpath="${work.space}"/>
+        </svn>-->
+    </target>
+
+    <!--编译-->
+    <target name="compile" depends="svn" description="======compile project======">
+        <echo message="compile==========>${ant.project.name}: ${ant.file}"/>
+        <mkdir dir="${build.dir}"/>
+        <copy includeemptydirs="false" todir="${build.dir}">
+            <fileset dir="${java.source}" excludes="**/*.launch, **/*.java, config/*.*"/>
+        </copy>
+
+        <javac includejavaruntime="true" debug="true" debuglevel="${debuglevel}" destdir="${build.dir}"
+               source="${source}" target="${target}" encoding="utf-8">
+            <src path="${java.source}"/>
+            <!--<src path="E:/antTest/tpo/src-framework"/>-->
+            <!--<src path="E:/antTest/tpo/src-org"/>-->
+            <!--<src path="E:/antTest/tpo/src-other"/>-->
+            <!--<src path="E:/antTest/tpo/src-example"/>-->
+            <classpath>
+                <path refid="project.classpath"></path>
+            </classpath>
+        </javac>
+    </target>
+
+    <!--压缩，打包-->
+    <target name="war" depends="compile" description="======compress j2ee war file======">
+        <mkdir dir="${dist.dir}"/>
+        <war destfile="${war.file}" webxml="${web.dir}/WEB-INF/web.xml">
+            <fileset dir="${web.dir}"/>
+            <classes dir="${build.dir}"/>
+            <lib dir="${lib.dir}"/>
+        </war>
+    </target>
+
+    <!--关闭tomcat-->
+    <target name="shutdowntomcat" description="========shutdowntomcat===========">
+        <exec executable="${tomcat.home}/bin/shutdown.bat" failonerror="false"></exec>
+        <sleep seconds="10"/>
+    </target>
+
+    <!--启动tomcat-->
+    <target name="startuptomcat" description="========startuptomcat===========">
+        <sleep seconds="5"/>
+
+        <exec executable="${tomcat.home}/bin/startup.bat" failonerror="false"></exec>
+    </target>
+
+    <!--把项目war包复制到tomcat/webapps-->
+    <target name="deploy" depends="war">
+        <copy file="${war.file}" todir="${tomcat.home}/webapps"/>
+    </target>
+
+    <!--关闭tomcat，部署，启动tomcat，如果tomcat在关闭状态直接执行deploy和startuptomcat-->
+    <!-- <target name="auto" depends="deploy,startuptomcat">-->
+    <target name="auto" depends="shutdowntomcat,deploy,startuptomcat">
+        <echo message="DONE!!!!"/>
+    </target>
+
+    <target name="compress">
+        <zip basedir="${build.dir}" zipfile="${dist.dir}/${ant.project.name}.zip"/>
+        <gzip srcresource="${build.dir}/../*.class" destfile="${dist.dir}/${ant.project.name}.class.gz"/>
+    </target>
+</project>

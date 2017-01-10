@@ -113,6 +113,7 @@
 		<module>ch18-jpa</module>
 		<module>ch19-steroids</module>
 		<module>appA-junit3_junit4</module>
+		<module>datacenter</module>
 	</modules>
 	<build>
 		<plugins>

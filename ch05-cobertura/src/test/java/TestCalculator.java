@@ -44,7 +44,7 @@ public class TestCalculator
     @Parameters
     public static Collection<Integer[]> data()
     {
-        return Arrays.asList( new Integer[][] { { 1, 1 }, { 2, 4 }, { 3, 9 }, { 4, 16 }, { 5, 25 }, } );
+        return Arrays.asList( new Integer[][] { { 1, 1 }, { 2, 4 }, { 3, 9 }, { 4, 16 }, { 5, 25 },{6,36},{7,49} } );
     }
 
     public TestCalculator( int expected, int actual )
@@ -58,5 +58,12 @@ public class TestCalculator
     {
         Calculator calculator = new Calculator();
         assertEquals( expected, calculator.squareRoot( actual ) );
+    }
+
+    @Test
+    public void multipliedRoot()
+    {
+        Calculator calculator = new Calculator();
+        assertEquals( actual, calculator.multipliedRoot( expected ) );
     }
 }

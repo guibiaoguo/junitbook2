@@ -47,7 +47,7 @@ public class AjaxFormTest extends ManagedWebClient {
      * The directory /ch13-ajax/src/main/webapp has been configured as an IIS
      * virtual directory for this test.
      */
-    private static final String TEST_URL = "http://localhost:63342/junit-in-action-II/ch13-htmlunit/src/main/webapp/formtest.html";
+    private static final String TEST_URL = "http://localhost:63342/junitbook2/ch13-htmlunit/src/main/webapp/formtest.html";
 
     @Test
     public void testAjaxForm() throws IOException {

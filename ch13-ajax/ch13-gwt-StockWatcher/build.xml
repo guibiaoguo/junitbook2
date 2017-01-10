@@ -46,7 +46,7 @@
       <jvmarg value="-Xmx256M"/>
       <jvmarg line="${XstartOnFirstThread}"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
-      <arg value="com.google.gwt.sample.stockwatcher.StockWatcher"/>
+      <arg value="com.google.gwt.sample.stockwatcher.client.StockWatcher"/>
     </java>
   </target>
 
@@ -61,7 +61,7 @@
       <arg value="-startupUrl"/>
       <arg value="StockWatcher.html"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
-      <arg value="com.google.gwt.sample.stockwatcher.StockWatcher"/>
+      <arg value="com.google.gwt.sample.stockwatcher.client.StockWatcher"/>
     </java>
   </target>
 

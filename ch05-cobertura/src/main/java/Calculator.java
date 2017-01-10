@@ -35,4 +35,9 @@ public class Calculator
     {
         return a + b;
     }
+
+    public int multipliedRoot( int i )
+    {
+        return (int)(i * i);
+    }
 }
